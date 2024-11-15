@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Verification Status</title>
+</head>
+<body>
+    <h1>Check Verification Status</h1>
+    <form action="/sumsub/check_verification/" method="post">
+        {% csrf_token %}
+
+        <label for="applicant_id">Applicant ID:</label>
+        <input type="text" id="applicant_id" name="applicant_id" required>
+
+        <button type="submit">Check Verification Status</button>
+    </form>
+
+    {% if status %}
+    <h2>Status for Applicant ID: {{ applicant_id }}</h2>
+    <p><strong>Verification Status:</strong> {{ status }}</p>
+    <p><strong>Reason (if applicable):</strong> {{ reason }}</p>
+    {% endif %}
+
+</body>
+</html>

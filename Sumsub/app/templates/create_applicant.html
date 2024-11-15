@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Applicant</title>
+</head>
+<body>
+    <h1>Create a New Applicant</h1>
+    <form action="/sumsub/create_applicant/" method="post">
+        {% csrf_token %}
+        <button type="submit">Create Applicant</button>
+    </form>
+</body>
+</html>

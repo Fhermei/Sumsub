@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Document</title>
+</head>
+<body>
+    <h1>Add an ID Document</h1>
+    <form action="/sumsub/add_document/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="document" required>
+        <button type="submit">Add Document</button>
+    </form>
+</body>
+</html>
